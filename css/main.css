@@ -10,11 +10,13 @@ html {
 }
 
 body {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: #fff;
+	overflow-x: hidden;
 }
 
 main {
@@ -47,6 +49,12 @@ a {
 	background-size: cover;
 	background-position: center start;
 	background-blend-mode: multiply;
+}
+
+.hero__bg {
+	position: absolute;
+	top: 398px;
+	left: calc(50% + 260px);
 }
 
 /* HEADER */
@@ -185,6 +193,10 @@ a {
 	.site-header__language-item {
 		font-size: 18px;
 	}
+
+	.hero__bg {
+		display: none;
+	}
 }
 
 /* HEADER */
@@ -192,6 +204,7 @@ a {
 /* HERO  */
 .hero {
 	padding-top: 116px;
+	padding-bottom: 341px;
 }
 
 .hero__content {
@@ -218,31 +231,86 @@ a {
 	font-weight: 600;
 }
 
-@media only screen and (max-width: 956px){
+@media only screen and (max-width: 956px) {
 	.hero__content {
 		width: 100%;
 	}
 
-	.hero__title{
+	.hero__title {
 		font-size: 80px;
 		margin-bottom: 50px;
 	}
 
-	.hero__btn{
+	.hero__btn {
 		padding: 20px 30px;
 		font-size: 26px;
 	}
 }
 
-@media only screen and (max-width: 600px){
-	.hero__title{
+@media only screen and (max-width: 600px) {
+	.hero{
+		padding-top: 50px;
+		padding-bottom: 100px;
+	}
+
+	.hero__title {
 		font-size: 50px;
 		margin-bottom: 30px;
 	}
 
-	.hero__btn{
+	.hero__btn {
 		padding: 15px 25px;
 		font-size: 20px;
 	}
 }
 /* HERO  */
+
+.site-main {
+	background-color: #dda143;
+}
+
+/* COMPLEX START */
+.complex {
+	padding: 81px 0;
+}
+
+.complex__content {
+	width: 1000px;
+}
+
+.complex__title {
+	margin-bottom: 50px;
+	font-size: 144px;
+	font-weight: 900;
+	color: #fff;
+}
+
+.complex__desc {
+	margin-bottom: 10px;
+	font-size: 26px;
+	font-weight: 300;
+	color: #fff;
+}
+
+@media only screen and (max-width: 1100px) {
+	.complex__content {
+		width: 100%;
+	}
+
+	.complex__title {
+		margin-bottom: 30px;
+		font-size: 100px;
+	}
+
+	.complex__desc{
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.complex__title {
+		margin-bottom: 20px;
+		font-size: 50px;
+	}
+}
+/* COMPLEX END */
